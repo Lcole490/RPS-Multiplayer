@@ -1,0 +1,44 @@
+.jumbotron{
+    margin-top:20px;
+    height: 250px;
+    background-image: url("../images/rpslogo.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 100%;
+}
+
+
+.display-4{
+    
+    font-family: 'Allerta Stencil', sans-serif;
+    line-height: 250px;  
+    font-size: 60px;  
+}
+
+
+#p1{
+    border: 2px solid rgb(45, 108, 180);
+    height: 400px;
+    /* width: 350px; */
+    margin-right: 10px;
+    font-family: 'Allerta Stencil', sans-serif;
+    /* font-size: 30px; */
+   
+}
+
+#p2{
+    border: 2px solid rgba(194, 17, 17, 0.781);
+    height: 400px;
+    /* width: 350px; */
+    margin-left: 10px;
+    font-family: 'Allerta Stencil', sans-serif;
+    /* font-size: 30px; */
+}
+
+
+#chatroom{
+
+    border: 2px solid rgb(165, 25, 130);
+    height: 300px;
+    margin-top: 50px;
+}
