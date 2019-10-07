@@ -40,5 +40,35 @@
 
     border: 2px solid rgb(165, 25, 130);
     height: 300px;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#scoreboard{
+
+    border: 2px solid rgb(165, 25, 130);
+    height: 300px;
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.choice{
+    height: 112px;
+    width: 112px;
+    margin-bottom:20px;
+}
+
+.avatar{
+    height: 150px;
+    width: 150px;
+}
+
+
+#arena{
+    height: 400px;
+    font-family: 'Allerta Stencil', sans-serif;
 }
