@@ -1,4 +1,6 @@
-.jumbotron{
+/* Sets Design Parameters for Main RPS Banner */
+
+.jumbotron{        
     margin-top:20px;
     height: 250px;
     background-image: url("../images/rpslogo.jpg");
@@ -8,6 +10,7 @@
 }
 
 
+/* Sets Font Parameters for Main RPS Banner  */
 .display-4{
     
     font-family: 'Allerta Stencil', sans-serif;
@@ -16,6 +19,7 @@
 }
 
 
+/* Sets Parameters for Player One's Area */
 #p1{
     border: 2px solid rgb(45, 108, 180);
     height: 400px;
@@ -25,6 +29,9 @@
     /* font-size: 30px; */
    
 }
+
+
+/* Sets Parameters for Player Two's Area */
 
 #p2{
     border: 2px solid rgba(194, 17, 17, 0.781);
@@ -36,6 +43,9 @@
 }
 
 
+
+/* Sets Parameters for Chat Text Area */
+
 #chatroom{
 
     border: 2px solid rgb(165, 25, 130);
@@ -44,6 +54,9 @@
     margin-right: 10px;
     margin-bottom: 20px;
 }
+
+
+/* Sets Parameters for Player One and Two Statistics */
 
 #scoreboard{
 
@@ -56,19 +69,26 @@
 
 
 
+/* Sets Constant Height and Width for P1 and P2 throw choices */
+
 .choice{
     height: 112px;
     width: 112px;
     margin-bottom:20px;
 }
 
+
+/* Sets Constant Height and Width for P1 and P2 avatar images */
 .avatar{
     height: 150px;
     width: 150px;
 }
 
 
-#arena{
+/* Sets up parameters for div that will be dynamically manipulated
+Here is where the throw choices will be seen and a winner determined */
+
+/* #arena{
     height: 400px;
     font-family: 'Allerta Stencil', sans-serif;
-}
+} */
