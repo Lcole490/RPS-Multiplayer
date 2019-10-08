@@ -72,8 +72,8 @@
 /* Sets Constant Height and Width for P1 and P2 throw choices */
 
 .choice{
-    height: 112px;
-    width: 112px;
+    height: 48px;
+    width: 48px;
     margin-bottom:20px;
 }
 

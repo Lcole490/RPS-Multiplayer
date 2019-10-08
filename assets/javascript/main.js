@@ -22,6 +22,45 @@ var p2Pick;
 console.log(p1Attempt);
 console.log(p2Attempt);
 
+//**************************F I R E B A S E _ _ _ I N I T I A L I Z A T I O N */
+
+var firebaseConfig = {
+  apiKey: "AIzaSyBqJ4IJbotEAhUQDvqBL-3ppTJimh3GBYo",
+  authDomain: "rps-multiplayer-aa5f0.firebaseapp.com",
+  databaseURL: "https://rps-multiplayer-aa5f0.firebaseio.com",
+  projectId: "rps-multiplayer-aa5f0",
+  storageBucket: "",
+  messagingSenderId: "543343609952",
+  appId: "1:543343609952:web:25604679935c9ed5475b05",
+  measurementId: "G-VD4NMXVWZK"
+};
+
+
+firebase.initializeApp(config);
+
+// Create a variable to reference the database
+var database = firebase.database();
+
+var practice = 38;
+
+database.ref().on("value", function (snapshot){
+
+console.log(snapshot.val());
+
+practice = snapshot.val().player1;
+
+console.log(practice);
+
+})
+
+
+
+
+
+
+
+
+
 
 
 //**************S T A R T _ O F _ R P S _ G A M E _ L O G I C ************* */
