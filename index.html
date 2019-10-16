@@ -2,217 +2,229 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RPS Multiplayer Beta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 
 
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
-
-
-
-    <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
-
-
-    <!--Let browser know website is optimized for mobile-->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <body>
-        <div class="container">
+  <div class="sitecontainer">
+    <!-- Main container/div that houses entire page-->
 
-            <!-- Beginning of Jumbotron Div -->
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">Rock-Paper-Scissors</h1>
+
+
+    <!-- Beginning of Jumbotron Div -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Rock-Paper-Scissors</h1>
+      </div>
+    </div>
+    <!-- End of Jumbotron Div -->
+
+
+
+    <div class="mainarea">
+      <!-- Div houses the player area and arena, basically where gameplay occurs-->
+
+      <div class="columns">
+        <div class="column">
+
+          <div class="card">
+            <header class="card-header" id="p1nameplate">
+              <!-- <p class="card-header-title">
+                Component
+              </p> -->
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username"
+                  aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
                 </div>
+              </div>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content">
+              <div class="content" id="p1gameface">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
             </div>
-            <!-- End of Jumbotron Div -->
+            <footer class="card-footer" id="p1throwspace">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Edit</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+          </div>
 
-
-            <!-- Beginning of Player columns div -->
-            <div class="row">
-
-                <div class="col s6" id="p1">
-                    <div class="card-group">
-                        <div class="card" style="width: 20rem;">
-                            <div class="card-header">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Enter Name Here" aria-label=""
-                                        aria-describedby="button-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button"
-                                            id="button-addon2">Send</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="./assets/images/gameface.jpg" class="card-img-top avatar" alt="...">
-                            <div class="card-body">
-
-                            </div>
-                            <div class="card-footer text-muted">
-                                <div class="row">
+        </div>
 
 
 
-                                    <div class="col s2" id="p1picks" atr="p1rock">
-                                        <img class="choice" src="./assets/images/rockicon.jpg">
-                                    </div>
 
-                                    <div class="col s2" id="p1picks" atr="p1paper">
-                                        <img class="choice" src="./assets/images/papericon.png">
-                                    </div>
-
-                                    <div class="col s2" id="p1picks" atr="p1scissors">
-                                        <img class="choice" src="./assets/images/scissorsicon.jpg">
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 20rem;">
-                            <div class="card-header">
-                                <form id="setplayer">
-                                    <label for="CHAT"></label>
-                                    <input type="text" id="player1" placeholder="Enter Name Here to Play">
-                                    <button type="submit"> Join</button>
-                                </form>
-                            </div>
-                            <img src="./assets/images/p1_paper.jpg" class="card-img-top avatar" alt="...">
-                            <div class="card-body">
-
-                            </div>
-                            <div class="card-footer text-muted">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Chat Here..." aria-label=""
-                                        aria-describedby="button-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button"
-                                            id="button-addon2">Send</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+            </div>
+          </div>
+        </div>
 
 
 
-                    </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+              <a href="#">#css</a> <a href="#">#responsive</a>
+            </div>
+          </div>
+        </div>
 
 
 
 
 
+
+        <div class="column">
+
+          <div class="card">
+            <header class="card-header" id="p2nameplate">
+              <!-- <p class="card-header-title">
+                Component
+              </p> -->
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username"
+                  aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
                 </div>
-                
-                <div class="col s6" id="p1">
-                        <div class="card-group">
-                            <div class="card" style="width: 20rem;">
-                                <div class="card-header">
-                                        <form id="setplayer">
-                                                <label for="CHAT"></label>
-                                                <input type="text" id="player1" placeholder="Enter Name Here to Play">
-                                                <button type="submit"> Join</button>
-                                            </form>
-                                </div>
-                                <img src="./assets/images/p2_cometrock.jpg" class="card-img-top avatar" alt="...">
-                                <div class="card-body">
-    
-                                </div>
-                                <div class="card-footer text-muted">
-                                        <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Chat Here..." aria-label=""
-                                                    aria-describedby="button-addon2">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button"
-                                                        id="button-addon2">Send</button>
-                                                </div>
-                                            </div>
-
-                                </div>
-                            </div>
-                            <div class="card" style="width: 20rem;">
-                                <div class="card-header">
-                                        <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Enter Name Here" aria-label=""
-                                                    aria-describedby="button-addon2">
-                                                <div class="input-group-append">
-                                                    <button class="btn btn-outline-secondary" type="button"
-                                                        id="button-addon2">Send</button>
-                                                </div>
-                                            </div>
-                                </div>
-                                <img src="./assets/images/angryface.jpg" class="card-img-top avatar" alt="...">
-                                <div class="card-body">
-    
-                                </div>
-                                <div class="card-footer text-muted">
-                                    <div class="row">
-    
-    
-    
-                                        <div class="col s2" id="p1picks" atr="p1rock">
-                                            <img class="choice" src="./assets/images/rockicon.jpg">
-                                        </div>
-    
-                                        <div class="col s2" id="p1picks" atr="p1paper">
-                                            <img class="choice" src="./assets/images/papericon.png">
-                                        </div>
-    
-                                        <div class="col s2" id="p1picks" atr="p1scissors">
-                                            <img class="choice" src="./assets/images/scissorsicon.jpg">
-                                        </div>
-    
-                                    </div>
-                                </div>
-                            </div>
-    
-    
-    
-                        </div>
-    
-
-
-                </div>
+              </div>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content">
+              <div class="content" id="p2gameface">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
             </div>
-            <!-- End of Player Columns Div -->
+            <footer class="card-footer" id="p2throwspace">
+              <a href="#" class="card-footer-item">Save</a>
+              <a href="#" class="card-footer-item">Edit</a>
+              <a href="#" class="card-footer-item">Delete</a>
+            </footer>
+          </div>
+
+        </div>
+      </div>
 
 
 
+    </div>
 
 
-            <div class="row">
+    <div class="statsnchat">
+      <!--Div houses players' stats and chatroom content -->
 
-                <div class="col s6" id="chatroom">CHATROOM</div>
-                <div class="col s6" id="scoreboard">SCOREBOARD</div>
+      <div class="columns">
+
+
+        <div class="column">
+          <div class="control">
+            <textarea class="textarea has-fixed-size" readonly>This content is readonly</textarea>
+          </div>
+
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+            <span> <button class="button is-primary">Submit</button></span>
+          </div>
+        </div>
 
 
 
-            </div>
+        <div class="column">
+
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Player</th>
+                <th scope="col">Series Wins</th>
+                <th scope="col">Wins</th>
+                <th scope="col">Losses</th>
+                <th scope="col">Ties</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>ties</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>ties</td>
+              </tr>
+            </tbody>
+          </table>
 
 
         </div>
-    </body>
+      </div>
+    </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+  </div>
 
 
+  <script src="./assets/javascript/main.js"></script>
 </body>
 
 </html>
