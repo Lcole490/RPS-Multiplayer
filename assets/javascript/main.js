@@ -17,21 +17,23 @@ var p2ties =0;      // Variable for player 2 ties total
 var p1Pick;     // Variable that stores current P1 pick and reveals it only when both players have attempted
 var p2Pick;     // Variable that stores current P1 pick and reveals it only when both players have attempted
 
+var p1image;
+var p2image;
 
 var avatar ={
-    anonym = ["../images/anonymousface.jpg", "../images/anonymouswoman.jpg", "../images/anonymouswoman2.jpg", "../images/incognito.png"],
-    pface =["../images/angryface.jpg", "../images/angryman.jpg", "../images/angrywoman.jpg", "../images/devious_demon.jpg", "../images/evilface.jpg", "../images/gameface.jpg"]
+    anonym:["../images/anonymousface.jpg", "../images/anonymouswoman.jpg", "../images/anonymouswoman2.jpg", "../images/incognito.png"],
+    pface:["../images/angryface.jpg", "../images/angryman.jpg", "../images/angrywoman.jpg", "../images/devious_demon.jpg", "../images/evilface.jpg", "../images/gameface.jpg"]
 }
 
 var gladiators={ 
-    p1rock=["../images/p1_cometrock.png", "../images/p1_cometrock2.png"],
-    p2rock=["../images/p2_cometrock.jpg", "../images/p2_cometrock2.jpg", "../images/p2_cometrock3.jpg"],
+    p1rock:["../images/p1_cometrock.png", "../images/p1_cometrock2.png"],
+    p2rock:["../images/p2_cometrock.jpg", "../images/p2_cometrock2.jpg", "../images/p2_cometrock3.jpg"],
     
-    p1paper=["../images/p1_paper.jpg", "../images/p1_paper2.png"],
-    p2paper=["../images/p2_paper.jpg", "../images/p2_paper2.png"],
+    p1paper:["../images/p1_paper.jpg", "../images/p1_paper2.png"],
+    p2paper:["../images/p2_paper.jpg", "../images/p2_paper2.png"],
 
-    p1scissors=["p1_scissors.png"],
-    p2scissors=["p2_scissors.jpg"]
+    p1scissors:["p1_scissors.png"],
+    p2scissors:["p2_scissors.jpg"]
 }
 
 
@@ -112,32 +114,33 @@ console.log(p2Attempt);
 //****************************C L I C K _ _ E V E N T S ************** */
 
 // Function for when P1 clicks on a throw choice
-// $(".p1Picks").on("click", function(){
+$(".card-footer-item").on("click", function(){
 
-//     p1Pick = ($(this).attr("data-id"));
+    p1Pick = ($(this).attr("data-id"));
 
-//     p1Attempt= true;
+    p1Attempt= true;
 
-//     // shoot();
+    // shoot();
 
-//     console.log($(this).attr("data-id"));
-// console.log(p1pick);
-// });
+    console.log($(this).attr("data-id"));
+console.log(p1Pick);
+console.log(p1Attempt);
+});
 
 
 
-// // Function for when P1 clicks on a throw choice
-// $(".p2Picks").on("click", function(){
+// Function for when P1 clicks on a throw choice
+$(".p2item").on("click", function(){
 
-//     p2Pick = ($(this).attr("data-id"));
+    p2Pick = ($(this).attr("data-id"));
 
-//     p2Attempt= true;
+    p2Attempt= true;
 
-//     // shoot();
+    // shoot();
 
-//     console.log($(this).attr("data-id"))
-// console.log(p2Pick);
-// });
+    console.log(p2Attempt);
+console.log(p2Pick);
+});
 
 
 
@@ -189,10 +192,121 @@ function initPlayerTwo(event){
   return p2name;
 }
 
-$(document).on('submit', initPlayerOne);
+// $(document).on('submit', initPlayerOne);
 
 
-$(document).on('submit', initPlayerTwo);
+// $(document).on('submit', initPlayerTwo);
 
 
 
+function handleP2Form(event) {
+  var p2user = event.target.p2user.value.trim().toLowerCase();
+  event.preventDefault();
+
+  if (!p2user) {
+    
+    $('#p2user').attr('placeholder', 'You must enter a name');
+    return;
+  }
+console.log(p2user);
+initP2= true;
+console.log(initP2);
+}
+
+
+console.log(p2user);
+
+
+
+
+function handleP1Form(event) {
+    var p1user = event.target.p1user.value.trim().toLowerCase();
+    event.preventDefault();
+
+    if (!p1user) {
+      
+      $('#p1user').attr('placeholder', 'You must enter a name');
+      return;
+    }
+
+    initP1= true;
+    console.log(initP1);
+
+console.log(p1user);
+var aliasptag= $("<p>");
+aliasptag.addclass("p1tag");
+
+$("aliasptag").text("<strong>" + p1user + "<strong>");
+$("#aliasplace").append(aliasptag);
+  }
+
+
+
+// **************************E V E N T _ _ _ L I S T E N E R S _ _***********************************************
+
+
+ // document.addEventListener("submit", handleCityForm, false);
+ $(document).on('submit', handleP1Form);
+
+  // document.addEventListener("submit", handleCityForm, false);
+  $(document).on('submit', handleP2Form);
+
+
+
+  //********************************************************************************************************** */
+
+
+  function checkthrows(){
+
+    if  ((p1Attempt= true) && (p2Attempt =true)){
+      p1imageselect();
+      p2imageselect();
+      var p1choice =$("<img>");
+
+      p1choice.attr("src", p1image);
+  
+      $(".p1fighter").append(p1choice);
+
+
+      var p2choice =$("<img>");
+
+      p2choice.attr("src", p2image);
+  
+      $(".p2fighter").append(p2choice);
+
+
+    }
+
+    else if ((p1Attempt=true)&& (p2Attempt=false)){
+      var p1wait =$("<p>");
+      p1wait.text("Player Selection Locked. Waiting for Player 2");
+    }
+  }
+
+
+
+  function p1imageselect(){
+
+    if (p1Pick = "r"){
+    p1image=gladiators.p1rock[0];
+    }
+    else if (p1Pick="p"){
+      p1image=gladiators.p1paper[0];
+    }
+    else
+    p1image=gladiators.p1scissors[0];
+  }
+
+
+
+  function p2imageselect(){
+
+    if (p2Pick = "r"){
+    p2image=gladiators.p2rock[0];
+    }
+    else if (p2Pick="p"){
+      p2image=gladiators.p2paper[0];
+    }
+    else
+    p2image=gladiators.p2scissors[0];
+  }

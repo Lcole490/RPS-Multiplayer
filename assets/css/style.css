@@ -71,9 +71,9 @@
 
 /* Sets Constant Height and Width for P1 and P2 throw choices */
 
-.choice{
-    height: 48px;
-    width: 48px;
+.card-footer-item{
+    height: 96px;
+    width: 24px;
     margin-bottom:20px;
 }
 

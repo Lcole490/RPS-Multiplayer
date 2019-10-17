@@ -2,161 +2,188 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
 
-  <div class="sitecontainer">
-    <!-- Main container/div that houses entire page-->
+    <div class="sitecontainer">
+        <!-- Main container/div that houses entire page-->
 
 
 
-    <!-- Beginning of Jumbotron Div -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Rock-Paper-Scissors</h1>
-      </div>
+        <!-- Beginning of Jumbotron Div -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Rock-Paper-Scissors</h1>
+            </div>
+        </div>
+        <!-- End of Jumbotron Div -->
+
+
+
+        <div class="mainarea">
+            <!-- Div houses the player area and arena, basically where gameplay occurs-->
+
+            <div class="columns">
+                <div class="column">
+
+                    <div class="card">
+                        <header class="card-header" id="p1nameplate">
+                            <!-- <p class="card-header-title">
+                Component
+              </p> -->
+                            <form action="javascript:void(0)" id="p1user">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="p1user"
+                                        placeholder="Recipient's username" aria-label="Recipient's username"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="submit"
+                                            id="button-addon2">Button</button>
+                            </form>
+                    </div>
+                </div>
+                <a href="#" class="card-header-icon" aria-label="more options">
+                    <span class="icon">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </a>
+                </header>
+                <div class="card-content">
+                    <div class="content" id="p1gameface">
+                            <article class= "media">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                                <img src="./assets/images/incognito.png">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content" id="aliasplace">
+                                <p>
+                                    <strong>John Smith</strong>
+
+                                </p>
+                            </div>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+                <footer class="card-footer" id="p1throwspace">
+                    <img src="./assets/images/rockicon.jpg" class="card-footer-item"  data-id="r">
+                    <img src="./assets/images/papericon.png" class="card-footer-item" data-id="p">
+                    <img src="./assets/images/scissorsicon.jpg" class="card-footer-item"  data-id="s">
+                </footer>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3 p1fighter">
+                        <img src="" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="column">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3 p2fighter">
+                        <img src="" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="column">
+
+            <div class="card">
+                <header class="card-header" id="p2nameplate">
+                    <!-- <p class="card-header-title">
+                Component
+              </p> -->
+                    <form action="javascript:void(0)" id="p2user">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon2">Button</button>
+                    </form>
+            </div>
+        </div>
+        <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </a>
+        </header>
+        <div class="card-content">
+            <div class="content" id="p2gameface">
+                <article class= "media">
+                <figure class="media-left">
+                    <p class="image is-64x64">
+                        <img src="./assets/images/incognito.png">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>John Smith</strong>
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </div>
+        <footer class="card-footer" id="p2throwspace">
+            <img src="./assets/images/rockicon.jpg" class="card-footer-item p2item" data-id=  "r">
+            <img src="./assets/images/papericon.png" class="card-footer-item p2item" data-id= "p">
+            <img src="./assets/images/scissorsicon.jpg" class="card-footer-item p2item" data-id= "s">
+        </footer>
     </div>
-    <!-- End of Jumbotron Div -->
 
-
-
-    <div class="mainarea">
-      <!-- Div houses the player area and arena, basically where gameplay occurs-->
-
-      <div class="columns">
-        <div class="column">
-
-          <div class="card">
-            <header class="card-header" id="p1nameplate">
-              <!-- <p class="card-header-title">
-                Component
-              </p> -->
-
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username"
-                  aria-label="Recipient's username" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                </div>
-              </div>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content" id="p1gameface">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-            <footer class="card-footer" id="p1throwspace">
-              <a href="#" class="card-footer-item">Save</a>
-              <a href="#" class="card-footer-item">Edit</a>
-              <a href="#" class="card-footer-item">Delete</a>
-            </footer>
-          </div>
-
-        </div>
-
-
-
-
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-              <a href="#">#css</a> <a href="#">#responsive</a>
-            </div>
-          </div>
-        </div>
-
-
-
-
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-              <a href="#">#css</a> <a href="#">#responsive</a>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-        <div class="column">
-
-          <div class="card">
-            <header class="card-header" id="p2nameplate">
-              <!-- <p class="card-header-title">
-                Component
-              </p> -->
-
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username"
-                  aria-label="Recipient's username" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                </div>
-              </div>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content" id="p2gameface">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-              </div>
-            </div>
-            <footer class="card-footer" id="p2throwspace">
-              <a href="#" class="card-footer-item">Save</a>
-              <a href="#" class="card-footer-item">Edit</a>
-              <a href="#" class="card-footer-item">Delete</a>
-            </footer>
-          </div>
-
-        </div>
-      </div>
+    </div>
+    </div>
 
 
 
@@ -164,67 +191,69 @@
 
 
     <div class="statsnchat">
-      <!--Div houses players' stats and chatroom content -->
+        <!--Div houses players' stats and chatroom content -->
 
-      <div class="columns">
+        <div class="columns">
 
 
-        <div class="column">
-          <div class="control">
-            <textarea class="textarea has-fixed-size" readonly>This content is readonly</textarea>
-          </div>
+            <div class="column">
+                <div class="control">
+                    <textarea class="textarea has-fixed-size" readonly>R-P-S CHAT ROOM</textarea>
+                </div>
 
-          <div class="control">
-            <input class="input" type="text" placeholder="Text input">
-            <span> <button class="button is-primary">Submit</button></span>
-          </div>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                    <span> <button class="button is-primary">Submit</button></span>
+                </div>
+            </div>
+
+
+
+            <div class="column">
+
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Player</th>
+                            <th scope="col">Series Wins</th>
+                            <th scope="col">Wins</th>
+                            <th scope="col">Losses</th>
+                            <th scope="col">Ties</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>ties</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>ties</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
         </div>
-
-
-
-        <div class="column">
-
-
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Player</th>
-                <th scope="col">Series Wins</th>
-                <th scope="col">Wins</th>
-                <th scope="col">Losses</th>
-                <th scope="col">Ties</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>ties</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>ties</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-        </div>
-      </div>
     </div>
 
 
 
 
-  </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/main.js"></script>
 </body>
 
 </html>
